@@ -265,3 +265,59 @@ app.get("/ig/:username", (req, res) => {
 ```ejs
 <%- include("includes/head.ejs") %>
 ```
+
+### REST
+- Representational State Transfer
+- REST ia an architecture style that defines a set of constraints to be used for creating web services.
+
+#### RESTfull APIs
+- REST full apis are the type of apis which use rest architecture  style to build apis
+- REST full apis are used to perform CRUD operations
+
+#### CRUD Operations
+- **GET** retrieves resources.
+- **POST** submits new data to the server
+- **PUT** updates existing data
+- **PATCH** update existing data partially
+- **DELETE** removes data
+
+#### Creating RESTful APIs
+|||||
+|---|---|---|---|
+|GET|/posts|to get data for all posts|VIEW INDEX(main)|
+|POST|/posts|to add a new post|CREATE|
+|GET|/posts/:id|to get one post (user id)|VIEW|
+|PATCH|/posts/:id|to update specific post|UPDATE|
+|DELETE|/posts/:id|to delete specific post|DESTROY|
+
+#### Project setup
+```
+npm init -y
+npm i express
+npm i ejs
+
+or 
+npm i express ejs
+```
+- create views folder, create index.js file, and pest the code
+```javascript
+const express = require("express")
+const app = express()
+const PORT = 8000
+
+
+app.listen(PORT, () => {
+    console.log(`listening on port ${PORT}`);
+
+})
+```
+- then start the server
+```
+nodemon index.js
+```
+#### Create id for the posts
+UUID Package
+- Universally unique identifier
+```
+npm install uuid
+```
