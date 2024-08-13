@@ -321,3 +321,18 @@ UUID Package
 ```
 npm install uuid
 ```
+
+### Middleware
+- It is an intermediary
+```mermaid
+    flowchart LR
+    A(Request)--->B(Middleware)--->C(Response)
+```
+- **in Express**
+- Middleware in Express are function that come into play after the server receives that request and before the response is sent to the clint.
+
+#### Common middleware functions:
+- methodOverride
+- bodyParser
+- express.static
+- express.urlencoded
